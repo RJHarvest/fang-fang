@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Dolce Vita Light';
+    src: url('../fonts/dolce_vita_light-webfont.woff2') format('woff2'),
+         url('../fonts/dolce_vita_light-webfont.woff') format('woff'),
+         url('../fonts/dolce_vita_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Dolce Vita Light' !important;
+  letter-spacing: 2px !important;
+  color: #fff !important;
+}
+body {
+  font-family: 'Dolce Vita Light' !important;
+  letter-spacing: 2px !important;
+  color: #ba160c !important;
+}
+hr {
+  border-top: 2px solid #ba160c !important;
+}
+.button-primary {
+  background-color: transparent !important;
+  color: #fff !important;
+  letter-spacing: 2px !important;
+  padding: 20px 40px !important;
+  border: 1px solid #ba160c !important;
+  border-radius: 4px !important;
+  outline: none !important;
+}
+.button-primary:hover {
+  background-color: #ba160c !important;
+  transition: 0.3s ease !important;
+}
+.button-secondary {
+  background-color: #ba160c !important;
+  color: #fff !important;
+  letter-spacing: 2px !important;
+  padding: 20px 40px !important;
+  border: 1px solid #ba160c !important;
+  border-radius: 4px !important;
+  outline: none !important;
+}
+.button-secondary:hover {
+  filter: brightness(120%);
+  transition: 0.3s ease !important;
+}
+.button-small {
+  padding: 10px 20px !important;
+}
+.arrow {
+  font-size: 50px;
+  color: #fff !important;
+}
+.arrow:hover {
+  filter: brightness(80%);
+}
+.color-primary {
+  color: #ba160c !important;
+}
+
+/* #nav-icon4 {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+} */
+#nav-icon4 span{
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+}
