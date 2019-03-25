@@ -24,6 +24,7 @@ p {
   font-size: 16px;
   letter-spacing: 0.4px;
   line-height: 28px;
+	text-align: justify;
 }
 
 hr {
@@ -42,6 +43,11 @@ hr {
 .parallax-section {
   background-attachment: fixed !important;
   background-size: cover !important;
+}
+
+.aboutUs {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 /* preloader section */
@@ -171,7 +177,7 @@ hr {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 0;
 }
 
@@ -321,7 +327,6 @@ footer {
   color: #ffffff;
   padding-top: 80px;
   padding-bottom: 80px;
-	z-index: 3;
 }
 footer h2 {
   padding-bottom: 14px;
@@ -344,7 +349,7 @@ footer .fa {
   font-size: 12px;
   padding-right: 10px;
 }
-.footer{
+.footer-content{
 	z-index: 2;
 }
 
