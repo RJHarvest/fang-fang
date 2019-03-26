@@ -1,37 +1,34 @@
 /* http://www.tooplate.com/view/2076-zentro */
-body
-	{
-		background: #1A1A1D;
-    /* font-family: 'Roboto', sans-serif; */
-    font-weight: 400;
-    position: relative;
-	}
 
+body {
+	background: #1A1A1D;
+  font-weight: 400;
+  position: relative;
+}
 .heading {
   font-size: 22px;
   font-weight: 500;
 	letter-spacing: 2px;
 }
-
 .subheading {
   font-size: 16px;
   padding-bottom: 60px;
 }
-
 p {
   color: #848484;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.4px;
+  letter-spacing: 2px;
   line-height: 28px;
-	text-align: justify;
+	/* text-align: justify; */
 }
-
 hr {
 	border-top: 2px solid #828282;
 	width: 120px;
 }
-
+input,textarea {
+	letter-spacing: 1.5px;
+}
 .menu, .gallery, .team, .newsletter, .testimonial {
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -44,10 +41,18 @@ hr {
   background-attachment: fixed !important;
   background-size: cover !important;
 }
-
-.aboutUs {
+.aboutUs, .featured-dish {
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+.no-padding {
+	padding: 0 !important;
+}
+.box-padding {
+	padding: 0 40px !important;
+}
+.menu-padding {
+	padding: 0 7px !important;
 }
 
 /* preloader section */
@@ -181,6 +186,10 @@ hr {
 	z-index: 0;
 }
 
+.story p, .cuisine p{
+	text-align: justify;
+}
+
 /* team section */
 .team {
   text-align: center;
@@ -198,6 +207,13 @@ hr {
 }
 
 /* menu section */
+#menu {
+	background-image: url('../images/fangfang-dining3.jpg');
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .menu h4 {
 	line-height: 1.5;
 }
@@ -209,6 +225,12 @@ hr {
 }
 .menu span {
   color: #5C5C5C;
+}
+.card {
+	background-color: rgba(26, 26, 29, 0.85);
+	border-color: #1A1A1D !important;
+	padding: 0;
+	/* opacity: 0.9; */
 }
 
 /* testimonial section */
@@ -315,6 +337,26 @@ hr {
 .newsletter input[type="submit"]:hover {
   background: #999;
   color: #ffffff;
+}
+
+/* menu slideshow */
+.slideshow {
+	margin-top: 30px;
+}
+.slideshow-content {
+	position: relative;
+	margin: 0 10px;
+}
+.slideshow img {
+	width:100%;
+}
+.slideshow-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 15px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* footer section */
