@@ -29,7 +29,7 @@ hr {
 input,textarea {
 	letter-spacing: 1.5px;
 }
-.menu, .gallery, .team, .newsletter, .testimonial {
+.menu, .gallery, .team, .newsletter, .testimonial, .featured-dish {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
@@ -41,7 +41,7 @@ input,textarea {
   background-attachment: fixed !important;
   background-size: cover !important;
 }
-.aboutUs, .featured-dish {
+.aboutUs {
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -53,6 +53,9 @@ input,textarea {
 }
 .menu-padding {
 	padding: 0 7px !important;
+}
+.center {
+	text-align: center;
 }
 
 /* preloader section */
@@ -128,6 +131,9 @@ input,textarea {
 .navbar-default .navbar-nav li a:hover,
 .navbar-default .navbar-nav li a:focus {
 	color: #ba160c;
+}
+.navbar-color-primary {
+	background-color: rgba(26,26,29,0.8);
 }
 
 /* home section */
@@ -208,10 +214,9 @@ input,textarea {
 
 /* menu section */
 #menu {
-	background-image: url('../images/fangfang-dining3.jpg');
+	background-image: url('../images/fangfood.jpg');
 	width: 100%;
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
 }
 .menu h4 {
@@ -230,7 +235,18 @@ input,textarea {
 	background-color: rgba(26, 26, 29, 0.85);
 	border-color: #1A1A1D !important;
 	padding: 0;
-	/* opacity: 0.9; */
+}
+.caption h3 {
+	margin-bottom: 15px;
+}
+
+/* featured dish */
+.slick-dots li.slick-active button:before {
+  color: #ba160c !important;
+}
+.slick-dots li button:before{
+	font-size: 25px;
+	color: #fff !important;
 }
 
 /* testimonial section */
@@ -267,14 +283,46 @@ input,textarea {
 }
 
 /* contact section */
+#contact {
+	background-image: url('../images/fangfang-dining3.jpg');
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+}
 .contact {
+	padding-top: 100px;
+	padding-bottom: 60px;
+}
+.contact-padding {
+	padding: 20px 10px;
+}
+.contact-padding .heading {
+	padding-top: 15px;
+}
+.contact .hr-long {
+	width: 90%;
+	border-top: 1px solid #808080 !important;
+}
+.contact .caption {
+	padding: 30px;
+}
+.caption button {
+	margin-top: 15px;
+}
+#map {
+	width: 100%;
+	height: 200px;
+}
+
+/* contact-message section */
+.contact-message {
   padding-top: 80px;
   padding-bottom: 100px;
 }
-.contact .col-md-8 {
+.contact-message .col-md-8 {
   margin-bottom: 32px;
 }
-.contact .form-control {
+.contact-message .form-control {
   background: #ffffff;
   border: none;
   border-radius: 0;
@@ -283,13 +331,13 @@ input,textarea {
   margin-bottom: 10px;
   transition: all 0.4s ease-in-out;
 }
-.contact .form-control:focus {
+.contact-message .form-control:focus {
   border-color: #f9f9f9;
 }
-.contact input {
+.contact-message input {
   height: 48px;
 }
-.contact input[type="submit"] {
+.contact-message input[type="submit"] {
   background: transparent;
   border: 2px solid #999;
   border-radius: 10px;

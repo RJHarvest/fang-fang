@@ -28,22 +28,94 @@ $(function(){
 
   // HIDE MOBILE MENU AFTER CLIKING ON A LINK
   $('.navbar-collapse a').click(function(){
-        $(".navbar-collapse").collapse('hide');
-    });
+    $(".navbar-collapse").collapse('hide');
+  });
 
   // NIVO LIGHTBOX
   $('#gallery a').nivoLightbox({
-        effect: 'fadeScale',
-    });
+    effect: 'fadeScale',
+  });
 
+  $('#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
+
+  // var scroll_start = 0;
+  // var startchange = $('.featured-dish');
+  // var offset = startchange.offset().top;
+  // if (startchange.length){
+  //   $(document).scroll(function() {
+  //      scroll_start = $(this).scrollTop();
+  //      if(scroll_start > offset) {
+  //         console.log('success');
+  //         $('.slideshow').slick({
+  //           dots: true,
+  //           infinite: true,
+  //           speed: 300,
+  //           slidesToShow: 3,
+  //           slidesToScroll: 1,
+  //           slidesToScroll: 1,
+  //           autoplay: true,
+  //           autoplaySpeed: 2000,
+  //           responsive: [
+  //             {
+  //               breakpoint: 1024,
+  //               settings: {
+  //                 slidesToShow: 3,
+  //                 slidesToScroll: 1,
+  //                 infinite: true,
+  //                 dots: true
+  //               }
+  //             },
+  //             {
+  //               breakpoint: 480,
+  //               settings: {
+  //                 slidesToShow: 1,
+  //                 slidesToScroll: 1
+  //               }
+  //             }
+  //           ]
+  //         });
+  //       }else if (scroll_start < offset) {
+  //         $('.slideshow').slick({
+  //           dots: true,
+  //           infinite: true,
+  //           speed: 300,
+  //           slidesToShow: 3,
+  //           slidesToScroll: 1,
+  //           slidesToScroll: 1,
+  //           autoplay: false,
+  //           responsive: [
+  //             {
+  //               breakpoint: 1024,
+  //               settings: {
+  //                 slidesToShow: 3,
+  //                 slidesToScroll: 1,
+  //                 infinite: true,
+  //                 dots: true
+  //               }
+  //             },
+  //             {
+  //               breakpoint: 480,
+  //               settings: {
+  //                 slidesToShow: 1,
+  //                 slidesToScroll: 1
+  //               }
+  //             }
+  //           ]
+  //         });
+  //       }
+  //   });
+  // }
+
+  // slideshow featured dish
   $('.slideshow').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -63,6 +135,16 @@ $(function(){
         }
       }
     ]
+  });
+
+  // slideshow testimonial
+  $('.slideshow-testimonial').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false
   });
 
 });

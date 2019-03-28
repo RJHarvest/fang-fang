@@ -27,17 +27,16 @@
 </section>
 
 <!-- navigation section -->
-<section class="navbar navbar-default navbar-fixed-top" role="navigation">
+<section class="navbar navbar-default navbar-fixed-top navbar-color-primary" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="nav-icon4">
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
 			<a href="index.html" class="navbar-brand">
-				<!-- <img src="images/logo-white.png" style="height: 40px;"> -->
-				Fang Fang
+				<img src="images/icon.png" style="height: 30px;float:left;"><span style="margin-left:10px;">Fang Fang</span>
 			</a>
 		</div>
 		<div class="collapse navbar-collapse">
@@ -64,8 +63,8 @@
 			</div>
 			<div class="col-md-3 col-sm-6 wow fadeInUp menu-padding" wow-data-delay="0.6s">
 				<div class="thumbnail card">
-		      <img src="images/gallery-img1.jpg" alt="lunch">
-		      <div class="caption">
+		      <img src="images/fangfood4.jpg" alt="brunch">
+		      <div class="caption center">
 		        <h3>brunch</h3>
 		        <!-- <p>...</p> -->
 		        <p><a href="#lunch.pdf" class="btn button-primary button-small">View Menu</a></p>
@@ -74,8 +73,8 @@
 			</div>
 			<div class="col-md-3 col-sm-6 wow fadeInUp menu-padding" wow-data-delay="0.6s">
 				<div class="thumbnail card">
-		      <img src="images/gallery-img2.jpg" alt="lunch">
-		      <div class="caption">
+		      <img src="images/fangfang-food.jpg" alt="lunch">
+		      <div class="caption center">
 		        <h3>lunch</h3>
 		        <!-- <p>...</p> -->
 		        <p><a href="#lunch.pdf" class="btn button-primary button-small">View Menu</a></p>
@@ -84,8 +83,8 @@
 			</div>
 			<div class="col-md-3 col-sm-6 wow fadeInUp menu-padding" wow-data-delay="0.6s">
 				<div class="thumbnail card">
-		      <img src="images/gallery-img1.jpg" alt="lunch">
-		      <div class="caption">
+		      <img src="images/fangfang-cocktail1.jpg" alt="cocktails">
+		      <div class="caption center">
 		        <h3>cocktails</h3>
 		        <!-- <p>...</p> -->
 		        <p><a href="#lunch.pdf" class="btn button-primary button-small">View Menu</a></p>
@@ -94,8 +93,8 @@
 			</div>
 			<div class="col-md-3 col-sm-6 wow fadeInUp menu-padding" wow-data-delay="0.6s">
 				<div class="thumbnail card">
-		      <img src="images/gallery-img4.jpg" alt="lunch">
-		      <div class="caption">
+		      <img src="images/fangfang-cocktail2.jpg" alt="wine">
+		      <div class="caption center">
 		        <h3>wine</h3>
 		        <!-- <p>...</p> -->
 		        <p><a href="#lunch.pdf" class="btn button-primary button-small">View Menu</a></p>
@@ -106,12 +105,14 @@
 	</div>
 </section>
 
-<section class="featured-dish parallax-section">
+<!-- featured dish section -->
+<section id="featured-dish" class="featured-dish parallax-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-offset-2 col-md-8 col-sm-12 text-center">
 				<h1 class="heading">Featured dishes</h1>
 				<hr>
+				<h5 style="margin:20px 0;padding:0;">Subscribe now to be the first to receive special news and event updates from Fang Fang.</h5>
 			</div>
 			<div class="col-md-12">
 				<div class="slideshow">
@@ -163,41 +164,6 @@
 	</div>
 </section>
 
-
-<!-- <div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Vegetable ................ <span>$20.50</span></h4>
-	<h5>Chicken / Rosemary / Lemon</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Meat ........................... <span>$30.50</span></h4>
-	<h5>Meat / Rosemary / Lemon</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Pork ........................ <span>$40.75</span></h4>
-	<h5>Pork / Tooplate / Lemon</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Orange-Rosemary Salad .......................... <span>$55.00</span></h4>
-	<h5>Salad / Rosemary / Orange</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Squid ...................... <span>$65.00</span></h4>
-	<h5>Squid / Rosemary / Lemon</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Orange-Rosemary Shrimp ........................ <span>$70.50</span></h4>
-	<h5>Shrimp / Rosemary / Orange</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Prawn ................... <span>$110.75</span></h4>
-	<h5>Chicken / Rosemary / Lemon</h5>
-</div>
-<div class="col-md-6 col-sm-6">
-	<h4>Lemon-Rosemary Seafood ..................... <span>$220.50</span></h4>
-	<h5>Seafood / Rosemary / Lemon</h5>
-</div> -->
-
-
 <!-- footer section -->
 <footer class="parallax-section">
 	<div class="overlay"></div>
@@ -207,11 +173,15 @@
 				<h2 class="heading">Contact Info.</h2>
 				<div class="ph">
 					<p><i class="fa fa-phone"></i> Phone</p>
-					<h4>(852) 2983 9083</h4>
+					<a href="tel:+85229839083">
+						<h4>(852) 2983 9083</h4>
+					</a>
 				</div>
 				<div class="email">
 					<p><i class="fa fa-mail-forward"></i> Email</p>
-					<h4>INFO@FANGFANG.COM.HK</h4>
+					<a href="mailto:info@fangfang.com.hk">
+						<h4>INFO@FANGFANG.COM.HK</h4>
+					</a>
 				</div>
 				<div class="address">
 					<p><i class="fa fa-map-marker"></i> Our Location</p>
@@ -259,7 +229,6 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/myscript.js"></script>
 
 </body>
 </html>
