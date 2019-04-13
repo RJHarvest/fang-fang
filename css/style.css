@@ -157,7 +157,7 @@ hr {
 input,textarea {
 	letter-spacing: 1.5px;
 }
-.menu, .gallery, .team, .newsletter, .featured-dish {
+.menu, .gallery, .newsletter, .featured-dish {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
@@ -172,6 +172,14 @@ input,textarea {
 .aboutUs, .testimonial {
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+.aboutUs-story {
+  padding-top: 100px;
+	padding-bottom: 50px;
+}
+.team {
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 .no-padding {
 	padding: 0 !important;
@@ -344,12 +352,16 @@ input,textarea {
 	z-index: 0;
 }
 
-.story h1, .cusine h1, .services h1 {
+.story h1, .cusine h1, .services h1, .aboutUs-story h1 {
   margin-bottom: 20px;
 }
-.story p, .cuisine p, .services p {
+.story p, .cuisine p, .services p, .aboutUs-story p {
   margin-bottom: 40px;
 	text-align: justify;
+}
+
+.aboutUs .content {
+  padding: 0 20px;
 }
 
 /* team section */
