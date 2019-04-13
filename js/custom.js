@@ -11,7 +11,7 @@ $(function(){
   // ------- WOW ANIMATED ------ //
   wow = new WOW(
   {
-    mobile: false
+    mobile: true
   });
   wow.init();
 
@@ -34,6 +34,9 @@ $(function(){
 
   // NIVO LIGHTBOX
   $('.gallery a').nivoLightbox({
+    effect: 'fadeScale',
+  });
+  $('.featured-dish a').nivoLightbox({
     effect: 'fadeScale',
   });
 
@@ -195,12 +198,12 @@ $(function(){
     $.ajax({
       type: 'POST',
       url: './scripts/sendMail.php',
-      data: {name: name, email: email, message: message},
-      success: function(){
-        alert('Message has been sent');
+      data: { name, email, message },
+      success: () =>{
+        alert('Your message has been sent! Thank you for your leaving a message!');
       },
-      error: function(){
-        alert('message not sent');
+      error: () =>{
+        alert('Your message could not be not sent! Please try again!');
       }
     })
   });

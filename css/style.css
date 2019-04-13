@@ -36,7 +36,6 @@ p {
   font-size: 16px;
   letter-spacing: 2px;
   line-height: 28px;
-	/* text-align: justify; */
 }
 hr {
   border-top: 2px solid #bc212e !important;
@@ -157,7 +156,7 @@ hr {
 input,textarea {
 	letter-spacing: 1.5px;
 }
-.menu, .gallery, .newsletter, .featured-dish {
+.menu, .gallery, .newsletter, .featured-dish, .team {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
@@ -175,12 +174,11 @@ input,textarea {
 }
 .aboutUs-story {
   padding-top: 100px;
-	padding-bottom: 50px;
 }
-.team {
+/* .team {
   padding-top: 50px;
   padding-bottom: 100px;
-}
+} */
 .no-padding {
 	padding: 0 !important;
 }
@@ -273,18 +271,6 @@ input,textarea {
   margin: 0 !important;
   font-size: inherit;
 }
-/* .navbar-default .navbar-nav li a button:hover{
-  color: #bc212e !important;
-  background-color: transparent !important;
-} */
-/* .navbar-default .navbar-nav li:last-of-type{
-  background-color: #bc212e;
-  border: 1px solid #bc212e;
-}
-.navbar-default .navbar-nav li a:last-of-type:hover{
-  color: #eee;
-  filter: brightness(120%);
-} */
 .navbar-color-primary {
 	background-color: rgba(26,26,29,0.8);
 }
@@ -348,7 +334,7 @@ input,textarea {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 0;
 }
 
@@ -382,7 +368,7 @@ input,textarea {
 
 /* menu section */
 #menu {
-	background-image: url('../images/food/home-bg.jpg');
+	background-image: url('../images/food/menu-bg.jpg');
 	width: 100%;
 	background-position: bottom;
 	background-size: cover;
@@ -479,8 +465,22 @@ input,textarea {
   font-size: 18px;
   line-height: 8px;
 }
-#gallery2 {
-	background-color: #343434;
+#gallery2, .team {
+	background-color: #222;
+}
+/* #gallery2 {
+  position: relative;
+} */
+#gallery2 .image-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#gallery2 a:hover {
+
 }
 
 /* contact section */
@@ -500,10 +500,10 @@ input,textarea {
 .contact-padding .heading {
 	padding-top: 15px;
 }
-.contact .hr-long {
+/* .contact .hr-long {
 	width: 90%;
 	border-top: 1px solid #808080 !important;
-}
+} */
 .contact .caption {
 	padding: 30px;
 }
