@@ -284,6 +284,9 @@ input,textarea {
 	height: 30px;
 	float:left;
 }
+.navbar-brand span {
+  margin-left: 10px;
+}
 
 /* home section */
 .home {
@@ -341,7 +344,11 @@ input,textarea {
 	z-index: 0;
 }
 
-.story p, .cuisine p{
+.story h1, .cusine h1, .services h1 {
+  margin-bottom: 20px;
+}
+.story p, .cuisine p, .services p {
+  margin-bottom: 40px;
 	text-align: justify;
 }
 
@@ -494,6 +501,7 @@ input,textarea {
 #map {
 	width: 100%;
 	height: 200px;
+  margin-bottom: 25px;
 }
 
 /* contact-message section */
@@ -567,6 +575,10 @@ input,textarea {
 .newsletter input[type="submit"]:hover {
   background: #999;
   color: #ffffff;
+}
+.newsletter h5 {
+  margin: 30px 0;
+  padding: 0;
 }
 
 /* menu slideshow */
