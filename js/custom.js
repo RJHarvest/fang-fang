@@ -33,11 +33,11 @@ $(function(){
   });
 
   // NIVO LIGHTBOX
-  $('#gallery a').nivoLightbox({
+  $('.gallery a').nivoLightbox({
     effect: 'fadeScale',
   });
 
-  $('#nav-icon4').click(function(){
+  $('#nav-icon').click(function(){
 		$(this).toggleClass('open');
 	});
 
@@ -116,10 +116,9 @@ $(function(){
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     variableHeight: true,
-    mobileFirst: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -183,6 +182,27 @@ $(function(){
         }
       }
     ]
+  });
+
+  // submit message form
+  $('#message').submit(function(e){
+    e.preventDefault();
+    var $form = $(this);
+    const name = $form.find("input[name='name']").val();
+    const email = $form.find("input[name='email']").val();
+    const message = $form.find("textarea[name='message']").val();
+
+    $.ajax({
+      type: 'POST',
+      url: './scripts/sendMail.php',
+      data: {name: name, email: email, message: message},
+      success: function(){
+        alert('Message has been sent');
+      },
+      error: function(){
+        alert('message not sent');
+      }
+    })
   });
 
 });
