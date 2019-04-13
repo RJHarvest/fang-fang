@@ -1,21 +1,22 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Fang Fang</title>
+	<title>Fang Fang Restaurant & Bar</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<link rel="icon" href="images/icon.png">
+	<link rel="icon" href="images/icons/icon-white.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/nivo-lightbox.css">
-	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/nivo-default.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
 
@@ -28,13 +29,14 @@ p<!DOCTYPE html>
 <section class="navbar navbar-default navbar-fixed-top navbar-color-primary" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="nav-icon4">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="nav-icon">
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
 			<a href="index.html" class="navbar-brand">
-				<img src="images/icon.png" style="height: 30px;float:left;"><span style="margin-left:10px;">Fang Fang</span>
+				<img src="images/icons/icon.png">
+				<span style="margin-left:10px;">Fang Fang</span>
 			</a>
 		</div>
 		<div class="collapse navbar-collapse">
@@ -45,6 +47,7 @@ p<!DOCTYPE html>
 				<li><a href="services.html">services</a></li>
 				<li><a href="gallery.html">gallery</a></li>
 				<li><a href="contact.html">contact</a></li>
+				<li><a href="#"><button class="btn button-secondary">reserve now</button></a></li>
 			</ul>
 		</div>
 	</div>
@@ -55,11 +58,7 @@ p<!DOCTYPE html>
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">
-			<!-- <div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
-				<h1 class="heading">Opening Hours</h1>
-				<hr>
-			</div> -->
-			<div class="col-md-4 col-sm-12 contact-padding">
+			<div class="col-md-4 col-sm-12 col-xs-12 contact-padding">
 				<div class="thumbnail card">
 					<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
 						<h1 class="heading">Opening Hours</h1>
@@ -67,59 +66,48 @@ p<!DOCTYPE html>
 					</div>
 		      <div class="caption">
 						<div class="row">
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>Monday</h4>
+							<!-- <div class="col-md-12 col-sm-12">
+								<h4>lunch</h4>
 							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<p>Mon - Fri</p><p>12:00pm - 3:00pm</p>
 							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>Tuesday</h4>
+							<div class="col-md-12 col-sm-12 opening-hours-title">
+								<h4>brunch</h4>
 							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<p>Fri - sat</p><p>6:00pm - 12:30pm</p>
 							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>Wednesday</h4>
+							<div class="col-md-12 col-sm-12 opening-hours-title">
+								<h4>dinner</h4>
 							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<p>Mon - thurs</p><p>6:00pm - 11:00pm</p><p>Fri - sat</p><p>6:00pm - 11:30pm</p>
+							</div> -->
+
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>Monday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>thursday</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>Tuesday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>Wednesday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>friday</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>thursday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>friday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>saturday</h4>
-							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>12:00 pm - 02:30 pm</h4>
-							</div>
-							<!-- <hr class="hr-long"> -->
-							<div class="col-md-4 col-sm-4" style="text-align:left">
-								<h4>sunday</h4>
-							</div>
-							<div class="col-md-8 col-sm-8" style="text-align:right">
-								<h4>closed</h4>
+							<div class="col-md-12 col-sm-12 opening-hours">
+								<h4>saturday</h4><h4>12:00 nn - 02:30 pm<br>5:00 pm - 11:45 pm</h4>
 							</div>
 						</div>
 		      </div>
 		    </div>
 			</div>
-			<div class="col-md-4 col-sm-12 contact-padding">
+			<div class="col-md-4 col-sm-12 col-xs-12 contact-padding">
 				<div class="thumbnail card">
 					<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
 						<h1 class="heading">Our Location</h1>
@@ -131,7 +119,7 @@ p<!DOCTYPE html>
 		      </div>
 		    </div>
 			</div>
-			<div class="col-md-4 col-sm-12 contact-padding">
+			<div class="col-md-4 col-sm-12 col-xs-12 contact-padding">
 				<div class="thumbnail card">
 					<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
 						<h1 class="heading">Contact Us</h1>
@@ -151,7 +139,7 @@ p<!DOCTYPE html>
 							</a>
 						</div>
 						<a href="https://bookv5.chope.co/booking?rid=fangfang1707fgf&source=rest_fang-fang_hk&d=0&t=0&a=0&c=0&hn=0&hh=0&hh2=0&hf=0&select_location=0&sub_source=adw_google_remarketing&txn_ref=0&smart=0&hft=0&hs=0&go=0">
-							<button class="btn button-secondary button-small">Book Now</button>
+							<button class="btn button-secondary button-small">reserve Now</button>
 						</a>
 		      </div>
 		    </div>
@@ -169,7 +157,7 @@ p<!DOCTYPE html>
 				<hr>
 			</div>
 			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.6s">
-				<form action="#" method="post">
+				<form action="./contact.html" method="POST" id="message">
 					<div class="col-md-6 col-sm-6">
 						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
 				  </div>
@@ -180,15 +168,13 @@ p<!DOCTYPE html>
 						<textarea name="message" rows="8" class="form-control" id="message" placeholder="Message"></textarea>
 					</div>
 					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<input name="submit" type="submit" class="form-control btn button-secondary" value="Send message">
+						<input type="submit" class="form-control btn button-secondary" value="Send message">
 					</div>
 				</form>
 			</div>
-			<div class="col-md-2 col-sm-1"></div>
 		</div>
 	</div>
 </section>
-
 
 <!-- footer section -->
 <footer class="parallax-section">
@@ -220,13 +206,15 @@ p<!DOCTYPE html>
 					<p>12:00 AM - 2:30 PM</p>
 					<p>5:00 AM - 11:45 PM</p>
 					<p>Sunday closed</p>
-					<button class="btn button-secondary button-small">Make a reservation</button>
+					<a href="https://bookv5.chope.co/booking?rid=fangfang1707fgf&source=rest_fang-fang_hk&d=0&t=0&a=0&c=0&hn=0&hh=0&hh2=0&hf=0&select_location=0&sub_source=adw_google_remarketing&txn_ref=0&smart=0&hft=0&hs=0&go=0">
+						<button class="btn button-secondary button-small">Make a reservation</button>
+					</a>
 			</div>
 			<div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-delay="0.6s">
 				<h2 class="heading">Follow Us</h2>
 				<ul class="social-icon">
-					<li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
-					<li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="0.6s"></a></li>
+					<li><a href="https://www.facebook.com/FangFangAsian/" class="fa fa-facebook wow bounceIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="https://www.instagram.com/fangfangasian/?hl=en" class="fa fa-instagram wow bounceIn" data-wow-delay="0.6s"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -253,6 +241,7 @@ p<!DOCTYPE html>
 <script src="js/nivo-lightbox.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/slick.min.js"></script>
 <script>
 	var map;
 	function initMap() {
@@ -263,7 +252,7 @@ p<!DOCTYPE html>
 
 		var marker = new google.maps.Marker({
 				position: {lat: 22.280429, lng: 114.1529508},
-				icon: 'images/map-icon.png',
+				icon: 'images/icons/map-icon3.png',
 				title: "Fang Fang!"
 		});
 
