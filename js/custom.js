@@ -11,7 +11,7 @@ $(function(){
   // ------- WOW ANIMATED ------ //
   wow = new WOW(
   {
-    mobile: true
+    mobile: false
   });
   wow.init();
 
@@ -194,6 +194,10 @@ $(function(){
     const name = $form.find("input[name='name']").val();
     const email = $form.find("input[name='email']").val();
     const message = $form.find("textarea[name='message']").val();
+    if (name == '' || email == '' || message == '') {
+      alert('Please complete the form!');
+    }
+
 
     $.ajax({
       type: 'POST',
