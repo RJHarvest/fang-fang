@@ -8,14 +8,17 @@
     font-weight: normal;
     font-style: normal;
 }
-/* @font-face {
-    font-family: 'Chianti';
-    src: url('../fonts/chianti.woff2') format('woff2'),
-         url('../fonts/chianti.woff') format('woff'),
-         url('../fonts/chianti.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+}
+/* If the screen size is 480px wide or less, set the font-size to 14px */
+@media only screen and (max-width: 480px) {
+  p {
+    font-size: 0.8em;
+  }
+}
 
 body {
 	background: #1A1A1D;
@@ -33,7 +36,7 @@ h1,h2,h3,h4,h5,h6, p {
 p {
   color: #848484;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   letter-spacing: 2px;
   line-height: 28px;
 }
@@ -80,6 +83,7 @@ hr {
   color: #bc212e !important;
 }
 
+/* navbar hamburger icon */
 #nav-icon span{
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -175,10 +179,6 @@ input,textarea {
 .aboutUs-story {
   padding-top: 100px;
 }
-/* .team {
-  padding-top: 50px;
-  padding-bottom: 100px;
-} */
 .no-padding {
 	padding: 0 !important;
 }
@@ -350,9 +350,14 @@ input,textarea {
   padding: 0 20px;
 }
 
+.services span {
+  color: #bc212e;
+}
+
 /* team section */
 .team {
   text-align: center;
+  background-color: #121212;
 }
 .team h3 {
   font-size: 18px;
@@ -455,6 +460,7 @@ input,textarea {
 .gallery img {
   width: 100%;
   padding-bottom: 18px;
+  cursor: zoom-in;
 }
 .gallery .col-md-4 div {
   position: relative;
@@ -465,22 +471,28 @@ input,textarea {
   font-size: 18px;
   line-height: 8px;
 }
-#gallery2, .team {
-	background-color: #222;
-}
-/* #gallery2 {
-  position: relative;
-} */
-#gallery2 .image-overlay {
-  position: relative;
+
+/* index page gallery */
+.gallery2-content {
+  position: relative !important;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 0 !important;
 }
-#gallery2 a:hover {
-
+.gallery2-content .gallery2-text {
+  position: absolute !important;
+	top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+	padding: 70px 0;
+  margin: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.gallery2-text:hover {
+  opacity: 1;
 }
 
 /* contact section */
