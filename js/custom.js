@@ -1,4 +1,3 @@
-
 // preloader
 $(window).load(function(){
     $('.preloader').fadeOut(500); // set duration in brackets
@@ -43,74 +42,6 @@ $(function(){
   $('#nav-icon').click(function(){
 		$(this).toggleClass('open');
 	});
-
-  // var scroll_start = 0;
-  // var startchange = $('.featured-dish');
-  // var offset = startchange.offset().top;
-  // if (startchange.length){
-  //   $(document).scroll(function() {
-  //      scroll_start = $(this).scrollTop();
-  //      if(scroll_start > offset) {
-  //         console.log('success');
-  //         $('.slideshow').slick({
-  //           dots: true,
-  //           infinite: true,
-  //           speed: 300,
-  //           slidesToShow: 3,
-  //           slidesToScroll: 1,
-  //           slidesToScroll: 1,
-  //           autoplay: true,
-  //           autoplaySpeed: 2000,
-  //           responsive: [
-  //             {
-  //               breakpoint: 1024,
-  //               settings: {
-  //                 slidesToShow: 3,
-  //                 slidesToScroll: 1,
-  //                 infinite: true,
-  //                 dots: true
-  //               }
-  //             },
-  //             {
-  //               breakpoint: 480,
-  //               settings: {
-  //                 slidesToShow: 1,
-  //                 slidesToScroll: 1
-  //               }
-  //             }
-  //           ]
-  //         });
-  //       }else if (scroll_start < offset) {
-  //         $('.slideshow').slick({
-  //           dots: true,
-  //           infinite: true,
-  //           speed: 300,
-  //           slidesToShow: 3,
-  //           slidesToScroll: 1,
-  //           slidesToScroll: 1,
-  //           autoplay: false,
-  //           responsive: [
-  //             {
-  //               breakpoint: 1024,
-  //               settings: {
-  //                 slidesToShow: 3,
-  //                 slidesToScroll: 1,
-  //                 infinite: true,
-  //                 dots: true
-  //               }
-  //             },
-  //             {
-  //               breakpoint: 480,
-  //               settings: {
-  //                 slidesToShow: 1,
-  //                 slidesToScroll: 1
-  //               }
-  //             }
-  //           ]
-  //         });
-  //       }
-  //   });
-  // }
 
   // slideshow featured dish
   $('.slideshow').slick({
@@ -187,6 +118,29 @@ $(function(){
     ]
   });
 
+  // submit newsletter form
+  $('#newsletter').submit(function(e){
+      e.preventDefault();
+      var $form = $(this);
+      const email = $form.find("input[name='email']").val();
+
+      if (email == '') {
+        alert('Please enter a valid email address!');
+      }else {
+        $.ajax({
+          type: 'POST',
+          url: './scripts/subscribe.php',
+          data: { email },
+          success: () =>{
+            alert('Thank you for subscribing to Fang Fang! Be sure to check out your email for any news and event updates.');
+          },
+          error: () =>{
+            alert('Subscription failed! Please check your connection!');
+          }
+        });
+      }
+  });
+
   // submit message form
   $('#message').submit(function(e){
     e.preventDefault();
@@ -196,20 +150,19 @@ $(function(){
     const message = $form.find("textarea[name='message']").val();
     if (name == '' || email == '' || message == '') {
       alert('Please complete the form!');
+    }else {
+      $.ajax({
+        type: 'POST',
+        url: './scripts/sendMail.php',
+        data: { name, email, message },
+        success: () =>{
+          alert('Your message has been sent to Fang Fang! Thank you for sending us your thoughts! We will get back to you soon!');
+        },
+        error: () =>{
+          alert('Your message could not be not sent! Please try again!');
+        }
+      })
     }
-
-
-    $.ajax({
-      type: 'POST',
-      url: './scripts/sendMail.php',
-      data: { name, email, message },
-      success: () =>{
-        alert('Your message has been sent! Thank you for your leaving a message!');
-      },
-      error: () =>{
-        alert('Your message could not be not sent! Please try again!');
-      }
-    })
   });
 
 });
