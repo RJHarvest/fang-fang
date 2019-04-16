@@ -47,7 +47,7 @@ hr {
   background-color: transparent !important;
   color: #fff !important;
   letter-spacing: 2px !important;
-  padding: 20px 40px !important;
+  padding: 20px 40px;
   border: 1px solid #bc212e !important;
   border-radius: 4px !important;
   outline: none !important;
@@ -60,7 +60,7 @@ hr {
   background-color: #bc212e !important;
   color: #fff !important;
   letter-spacing: 2px !important;
-  padding: 20px 40px !important;
+  padding: 20px 40px;
   border: 1px solid #bc212e !important;
   border-radius: 4px !important;
   outline: none !important;
@@ -72,6 +72,17 @@ hr {
 .button-small {
   padding: 10px 20px !important;
 }
+/* @media only screen and (min-width: 768px) {
+  .button-responsive {
+    padding: 20px 40px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .button-responsive {
+    padding: 15px 20px !important;
+  }
+} */
+
 .arrow {
   font-size: 50px;
   color: #fff !important;
@@ -81,6 +92,9 @@ hr {
 }
 .color-primary {
   color: #bc212e !important;
+}
+.color-secondary {
+  color: #bbb !important;
 }
 
 /* navbar hamburger icon */
@@ -160,7 +174,7 @@ hr {
 input,textarea {
 	letter-spacing: 1.5px;
 }
-.menu, .gallery, .newsletter, .featured-dish, .team {
+.menu, .gallery, .newsletter, .featured-dish, .team, .events{
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
@@ -306,20 +320,9 @@ input,textarea {
   z-index: 1;
 }
 .home .btn {
-  background: transparent;
-  border-radius: 0;
-  border: 3px solid #ffffff;
-  color: #ffffff;
-  font-weight: bold;
   letter-spacing: 2px;
-  padding: 16px 42px;
   margin-top: 40px;
-  transition: all 0.4s ease-in-out;
 	z-index: 3;
-}
-.home .btn:hover {
-  background: #ffffff;
-  color: #202020;
 }
 .home-img {
 	margin-top: 100px;
@@ -338,10 +341,13 @@ input,textarea {
 	z-index: 0;
 }
 
-.story h1, .cusine h1, .services h1, .aboutUs-story h1 {
+.story h1, .cuisine h1, .services h1,
+.aboutUs-story h1, .supper-club h1, .happy-hour h1,
+.events h1 {
   margin-bottom: 20px;
 }
-.story p, .cuisine p, .services p, .aboutUs-story p {
+.story p, .cuisine p, .services p,
+.aboutUs-story p, .supper-club p {
   margin-bottom: 40px;
 	text-align: justify;
 }
@@ -350,7 +356,7 @@ input,textarea {
   padding: 0 20px;
 }
 
-.services span {
+.services span, .happy-hour span {
   color: #bc212e;
 }
 
@@ -400,12 +406,6 @@ input,textarea {
 }
 .opening-hours h4:last-of-type {
     float: right;
-}
-.opening-hours p:nth-child(2) {
-    float: right;
-}
-.opening-hours p:nth-child(3) {
-    float: left;
 }
 .opening-hours {
   clear: both;
@@ -481,6 +481,23 @@ input,textarea {
 }
 
 /* index page gallery */
+.gallery2 {
+	background-color: #1A1A1D;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.gallery2 .col-md-4 {
+  padding-top: 52px;
+}
+.gallery2 img {
+  width: 100%;
+  padding-bottom: 18px;
+}
+.gallery2 .col-md-4 div {
+  position: relative;
+  bottom: 18px;
+  padding-bottom: 12px;
+}
 .gallery2-content {
   position: relative !important;
   top: 0;
@@ -520,10 +537,6 @@ input,textarea {
 .contact-padding .heading {
 	padding-top: 15px;
 }
-/* .contact .hr-long {
-	width: 90%;
-	border-top: 1px solid #808080 !important;
-} */
 .contact .caption {
 	padding: 30px;
 }
@@ -631,6 +644,42 @@ input,textarea {
 	width: 100%;
 	padding: 10px 15px;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* events */
+.events {
+  background-image: url('../images/venue/fangfang-dining10.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.events .overlay {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.55);
+	z-index: 0;
+}
+.events-content {
+  z-index: 3;
+}
+.events h1 {
+  border-left: 3px solid #bc212e;
+  padding-left: 15px;
+}
+.events p {
+  text-align: justify;
+}
+.events i {
+  float: left;
+  font-size: 25px;
+  color: #fff;
+  margin-right: 5px;
 }
 
 /* footer section */
