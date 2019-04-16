@@ -467,9 +467,17 @@ input,textarea {
   bottom: 18px;
   padding-bottom: 12px;
 }
-.gallery h3 {
-  font-size: 18px;
-  line-height: 8px;
+@media only screen and (min-width: 768px) {
+  .gallery h3 {
+    font-size: 18px;
+    line-height: 8px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .gallery h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 /* index page gallery */
