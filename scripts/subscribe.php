@@ -7,28 +7,37 @@ require_once('PHPMailer/src/Exception.php');
 require_once('PHPMailer/src/SMTP.php');
 
 $email = $_POST["email"];
+$error = false;
 
-$mail = new PHPMailer(true);
-try {
-  $mail->SMTPDebug = 2;
-  $mail->isSMTP();
-  $mail->Host = 'ssl://smtp.gmail.com';
-  $mail->SMTPAuth = true;
-  $mail->Username = 'cgrghw@gmail.com';
-  $mail->Password = 'john54321';
-  $mail->SMTPSecure = false;
-  $mail->Port = 465;
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $error = true;
+}
 
-  $mail->setFrom($email);
-  $mail->addAddress('cgrghw@gmail.com');
-  $mail->isHTML(true);
-  $mail->Subject = 'New subscription from '.$email;
-  $mail->Body    = 'You have a new subscription from '.$email;
-  $mail->Send();
+if ($error) {
+  echo "<script>alert('Please enter a valid email address!');</script>";
+}else {
+  $mail = new PHPMailer(true);
+  try {
+    $mail->SMTPDebug = 2;
+    $mail->isSMTP();
+    $mail->Host = 'ssl://smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'cgrghw@gmail.com';
+    $mail->Password = 'john54321';
+    $mail->SMTPSecure = false;
+    $mail->Port = 465;
 
-  header("Location: http://localhost");
-  die();
-} catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    $mail->setFrom($email);
+    $mail->addAddress('cgrghw@gmail.com');
+    $mail->isHTML(true);
+    $mail->Subject = 'New subscription from '.$email;
+    $mail->Body    = 'You have a new subscription from '.$email;
+    $mail->Send();
+
+    header("Location: http://localhost");
+    die();
+  } catch (Exception $e) {
+      echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+  }
 }
 ?>
