@@ -192,6 +192,20 @@ input,textarea {
 .menu-padding {
 	padding: 0 7px !important;
 }
+@media only screen and (min-width: 768px) {
+  .responsive-padding {
+    padding: 0 80px !important;
+  }
+  .gallery2 .responsive-padding {
+    padding: 0 40px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .responsive-padding {
+    padding: 0 10px !important;
+  }
+}
+
 .center {
 	text-align: center;
 }
