@@ -72,16 +72,6 @@ hr {
 .button-small {
   padding: 10px 20px !important;
 }
-/* @media only screen and (min-width: 768px) {
-  .button-responsive {
-    padding: 20px 40px !important;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .button-responsive {
-    padding: 15px 20px !important;
-  }
-} */
 
 .arrow {
   font-size: 50px;
@@ -352,10 +342,6 @@ input,textarea {
 	text-align: justify;
 }
 
-.aboutUs .content {
-  padding: 0 20px;
-}
-
 .services span, .happy-hour span {
   color: #bc212e;
 }
@@ -383,6 +369,10 @@ input,textarea {
 	width: 100%;
 	background-position: bottom;
 	background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 .menu h4 {
 	line-height: 1.5;
@@ -432,6 +422,10 @@ input,textarea {
 	background-image: url('../images/venue/fangfang-bar.jpg');
 	width: 100%;
 	background-position: center;
+  -ms-background-position: center;
+  -o-background-position: center;
+  -moz-background-position: center;
+  -webkit-background-position: center;
 }
 .slideshow-testimonial .slideshow-content{
 	background-color: rgba(0, 0, 0, 0.85);
@@ -526,6 +520,10 @@ input,textarea {
 	width: 100%;
 	background-position: center;
 	background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
 }
 .contact {
 	padding-top: 100px;
@@ -651,8 +649,17 @@ input,textarea {
   background-image: url('../images/venue/fangfang-dining10.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
+
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+
+  -ms-background-repeat: no-repeat;
+  -o-background-repeat: no-repeat;
+  -moz-background-repeat: no-repeat;
+  -webkit-background-repeat: no-repeat;
   width: 100%;
   position: relative;
 }

@@ -21,7 +21,7 @@ $(function(){
     $('#menu').parallax("100%", 0.2);
     $('#team').parallax("100%", 0.3);
     $('#contact').parallax("100%", 0.1);
-    $('#testimonial').parallax("100%", 0.1);
+    // $('#testimonial').parallax("100%", 0.1);
 
   }
   initParallax();
@@ -88,13 +88,11 @@ $(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2500,
-    arrows: true,
-    mobileFirst: true,
+    variableHeight: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
         }
@@ -102,7 +100,6 @@ $(function(){
       {
         breakpoint: 768,
         settings: {
-          arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
         }
@@ -110,9 +107,9 @@ $(function(){
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false
         }
       }
     ]
