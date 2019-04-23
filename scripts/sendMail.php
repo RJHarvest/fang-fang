@@ -35,7 +35,7 @@ if ($error) {
     $mail->addAddress('cgrghw@gmail.com');
     $mail->isHTML(true);
     $mail->Subject = 'Message for Fang Fang from ' .$name;
-    $mail->Body    = 'This message is from '.$email.'\n\n '.$newmessage;
+    $mail->Body    = 'This message is from '.$name.' ('.$email.')<br/><br/>'.$newmessage;
     $mail->Send();
 
     header("Location: http://localhost");
