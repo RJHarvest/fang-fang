@@ -17,7 +17,15 @@ if (empty($name) || empty($email) || empty($message) || !filter_var($email, FILT
 }
 
 if ($error) {
-  echo "<script>alert('Please enter details on all fields!');</script>";
+  echo '<script language="javascript">';
+  echo 'window.location.href="contact.html";';
+  echo 'alert("Please complete the form!");';
+  echo '</script>';
+}elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  echo '<script language="javascript">';
+  echo 'window.location.href="contact.html";';
+  echo 'alert("Please enter a valid email address!");';
+  echo '</script>';
 }else {
   $mail = new PHPMailer(true);
   try {

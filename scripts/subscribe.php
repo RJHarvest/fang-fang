@@ -14,7 +14,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 if ($error) {
-  echo "<script>alert('Please enter a valid email address!');</script>";
+  echo '<script language="javascript">';
+  echo 'window.location.href="index.html";';
+  echo 'alert("Please enter a valid email address");';
+  echo '</script>';
 }else {
   $mail = new PHPMailer(true);
   try {

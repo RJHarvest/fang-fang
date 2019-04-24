@@ -115,6 +115,11 @@ $(function(){
     ]
   });
 
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
   // submit newsletter form
   $('#newsletter').submit(function(e){
       e.preventDefault();
@@ -122,6 +127,8 @@ $(function(){
       const email = $form.find("input[name='email']").val();
 
       if (email == '') {
+        alert('Please enter a valid email address!');
+      }else if (!validateEmail(email)) {
         alert('Please enter a valid email address!');
       }else {
         $.ajax({
@@ -147,6 +154,8 @@ $(function(){
     const message = $form.find("textarea[name='message']").val();
     if (name == '' || email == '' || message == '') {
       alert('Please complete the form!');
+    }else if (validateEmail(email)) {
+      alert('Please enter a valid email address!');
     }else {
       $.ajax({
         type: 'POST',
